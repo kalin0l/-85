@@ -3,12 +3,12 @@ import "../scss/app.scss";
 
 window.addEventListener("DOMContentLoaded", () => {
   // This block will be executed once the page is loaded and ready
-  let pokemonCount = 10
+  // let pokemonCount = 10
 
 
   const ul = document.querySelector("ul");
   const getData = () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=${pokemonCount}`).then(res => res.json()).then(data => {
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=10`).then(res => res.json()).then(data => {
       console.log(data);
       creator(data);
       return data.results;
